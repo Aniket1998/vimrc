@@ -1,6 +1,16 @@
-"Boilerplate for pathogen
+"Boilerplate for Vundle
 execute pathogen#infect()
-call deoplete#enable()
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+call vundle#end()
+filetype plugin indent on
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
+"Boilerplate for pathogen
 "Mappings for various plugins
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TagbarToggle<CR>
@@ -69,4 +79,3 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gV '[v']
 nnoremap <leader>s :mksession<CR>
-
